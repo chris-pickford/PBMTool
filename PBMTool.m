@@ -22,7 +22,7 @@ function varargout = PBMTool(varargin)
 
 % Edit the above text to modify the response to help PBMTool
 
-% Last Modified by GUIDE v2.5 24-May-2017 11:15:12
+% Last Modified by GUIDE v2.5 25-Jun-2017 22:34:03
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -133,19 +133,19 @@ function save_participant_button_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on selection change in listbox2.
-function listbox2_Callback(hObject, eventdata, handles)
-% hObject    handle to listbox2 (see GCBO)
+% --- Executes on selection change in files_available_listbox.
+function files_available_listbox_Callback(hObject, eventdata, handles)
+% hObject    handle to files_available_listbox (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: contents = cellstr(get(hObject,'String')) returns listbox2 contents as cell array
-%        contents{get(hObject,'Value')} returns selected item from listbox2
+% Hints: contents = cellstr(get(hObject,'String')) returns files_available_listbox contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from files_available_listbox
 
 
 % --- Executes during object creation, after setting all properties.
-function listbox2_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to listbox2 (see GCBO)
+function files_available_listbox_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to files_available_listbox (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -180,18 +180,18 @@ end
 
 
 
-function edit2_Callback(hObject, eventdata, handles)
-% hObject    handle to edit2 (see GCBO)
+function age_edit_Callback(hObject, eventdata, handles)
+% hObject    handle to age_edit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit2 as text
-%        str2double(get(hObject,'String')) returns contents of edit2 as a double
+% Hints: get(hObject,'String') returns contents of age_edit as text
+%        str2double(get(hObject,'String')) returns contents of age_edit as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit2_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit2 (see GCBO)
+function age_edit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to age_edit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -226,18 +226,18 @@ end
 
 
 
-function edit4_Callback(hObject, eventdata, handles)
-% hObject    handle to edit4 (see GCBO)
+function study_name_edit_Callback(hObject, eventdata, handles)
+% hObject    handle to study_name_edit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit4 as text
-%        str2double(get(hObject,'String')) returns contents of edit4 as a double
+% Hints: get(hObject,'String') returns contents of study_name_edit as text
+%        str2double(get(hObject,'String')) returns contents of study_name_edit as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit4_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit4 (see GCBO)
+function study_name_edit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to study_name_edit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -271,9 +271,9 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
 end
 
 
-% --- Executes on button press in pushbutton2.
-function pushbutton2_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton2 (see GCBO)
+% --- Executes on button press in add_file_button.
+function add_file_button_Callback(hObject, eventdata, handles)
+% hObject    handle to add_file_button (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
@@ -293,18 +293,18 @@ function pushbutton4_Callback(hObject, eventdata, handles)
 
 
 
-function edit5_Callback(hObject, eventdata, handles)
-% hObject    handle to edit5 (see GCBO)
+function file_rename_edit_Callback(hObject, eventdata, handles)
+% hObject    handle to file_rename_edit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit5 as text
-%        str2double(get(hObject,'String')) returns contents of edit5 as a double
+% Hints: get(hObject,'String') returns contents of file_rename_edit as text
+%        str2double(get(hObject,'String')) returns contents of file_rename_edit as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit5_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit5 (see GCBO)
+function file_rename_edit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to file_rename_edit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -313,3 +313,109 @@ function edit5_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+
+function name_edit_Callback(hObject, eventdata, handles)
+% hObject    handle to name_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of name_edit as text
+%        str2double(get(hObject,'String')) returns contents of name_edit as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function name_edit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to name_edit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on selection change in all_files_listbox.
+function all_files_listbox_Callback(hObject, eventdata, handles)
+% hObject    handle to all_files_listbox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns all_files_listbox contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from all_files_listbox
+
+
+% --- Executes during object creation, after setting all properties.
+function all_files_listbox_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to all_files_listbox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: listbox controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in analyse_file_button.
+function analyse_file_button_Callback(hObject, eventdata, handles)
+% hObject    handle to analyse_file_button (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in save_profile_button.
+function save_profile_button_Callback(hObject, eventdata, handles)
+% hObject    handle to save_profile_button (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in delete_file_button.
+function delete_file_button_Callback(hObject, eventdata, handles)
+% hObject    handle to delete_file_button (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on selection change in file_type_popupmenu.
+function file_type_popupmenu_Callback(hObject, eventdata, handles)
+% hObject    handle to file_type_popupmenu (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns file_type_popupmenu contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from file_type_popupmenu
+
+
+% --- Executes during object creation, after setting all properties.
+function file_type_popupmenu_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to file_type_popupmenu (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in activity_diary_checkbox.
+function activity_diary_checkbox_Callback(hObject, eventdata, handles)
+% hObject    handle to activity_diary_checkbox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of activity_diary_checkbox
+
+
+% --- Executes on button press in select_diary_button.
+function select_diary_button_Callback(hObject, eventdata, handles)
+% hObject    handle to select_diary_button (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
